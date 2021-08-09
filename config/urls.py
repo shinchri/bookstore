@@ -18,5 +18,18 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('', include('pages.urls')),
 ]
+
+# associated url for accounts endpoint:
+# available here: https://docs.djangoproject.com/en/3.1/topics/auth/default/#module-django.contrib.auth.views
+
+# acounts/login/ [name='login']
+# acounts/logout/ [name='logout']
+# acounts/password_change/ [name='password_change']
+# acounts/password_change/done/ [name='password_change_done']
+# acounts/password_reset/ [name='password_reset']
+# acounts/password_reset/done/ [name='pasword_reset_done']
+# acounts/reset/<uidb64>/<token>/ [name='password_reset_confirm']
+# acounts/reset/done/ [name='password_reset_complete']
