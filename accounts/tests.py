@@ -53,6 +53,7 @@ class SignupPageTests(TestCase):
         self.assertIsInstance(form, CustomUserCreationForm) 
         self.assertContains(self.response, 'csrfmiddlewaretoken')
 
+    # test signup view
     def test_signup_view(self):
         view = resolve('/accounts/signup/') 
         self.assertEqual(
